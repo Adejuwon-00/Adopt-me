@@ -35330,11 +35330,10 @@ const Pet = props => {
     /*#__PURE__*/
     (0, _jsxRuntime.jsxs)(_reactRouterDom.Link, {
       to: `/details/${id}`,
-      className: "pet",
+      className: "relative block",
       children: [
       /*#__PURE__*/
       (0, _jsxRuntime.jsx)("div", {
-        className: "image-container",
         children:
         /*#__PURE__*/
         (0, _jsxRuntime.jsx)("img", {
@@ -35344,7 +35343,7 @@ const Pet = props => {
       }),
       /*#__PURE__*/
       (0, _jsxRuntime.jsxs)("div", {
-        className: "info",
+        className: "absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pr-2 pt-2",
         children: [
         /*#__PURE__*/
         (0, _jsxRuntime.jsx)("h1", {
@@ -35381,7 +35380,7 @@ const Results = ({
   return (
     /*#__PURE__*/
     (0, _jsxRuntime.jsx)("div", {
-      className: "search",
+      className: "grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
       children: !pets.length ?
       /*#__PURE__*/
       (0, _jsxRuntime.jsx)("h2", {
@@ -35447,10 +35446,11 @@ const SearchParams = () => {
   return (
     /*#__PURE__*/
     (0, _jsxRuntime.jsxs)("div", {
-      className: "search-params",
+      className: "my-0 mx-auto w-11/12",
       children: [
       /*#__PURE__*/
       (0, _jsxRuntime.jsxs)("form", {
+        className: "p-10 mb-10 rounded-lg bg-gray-200 shadow-lg flex flex-col justify-center items-center divide-y divide-gray-900",
         onSubmit: e => {
           e.preventDefault();
           requestPets();
@@ -35458,10 +35458,12 @@ const SearchParams = () => {
         children: [
         /*#__PURE__*/
         (0, _jsxRuntime.jsxs)("label", {
+          className: "search-label",
           htmlFor: "location",
           children: ["Location",
           /*#__PURE__*/
           (0, _jsxRuntime.jsx)("input", {
+            className: "search-control",
             id: "location",
             onChange: e => setLocation(e.target.value),
             value: location,
@@ -35470,10 +35472,12 @@ const SearchParams = () => {
         }),
         /*#__PURE__*/
         (0, _jsxRuntime.jsxs)("label", {
+          className: "search-label",
           htmlFor: "animal",
           children: ["Animal",
           /*#__PURE__*/
           (0, _jsxRuntime.jsxs)("select", {
+            className: "search-control",
             id: "animal",
             value: animal,
             onChange: e => setAnimal(e.target.value),
@@ -35490,10 +35494,12 @@ const SearchParams = () => {
         }),
         /*#__PURE__*/
         (0, _jsxRuntime.jsxs)("label", {
+          className: "search-label",
           htmlFor: "breed",
           children: ["Breed",
           /*#__PURE__*/
           (0, _jsxRuntime.jsxs)("select", {
+            className: "search-control disabled: opacity-50",
             id: "breed",
             value: breed,
             onChange: e => setBreed(e.target.value),
@@ -35510,10 +35516,12 @@ const SearchParams = () => {
         }),
         /*#__PURE__*/
         (0, _jsxRuntime.jsxs)("label", {
+          className: "search-label",
           htmlFor: "theme",
           children: ["Theme",
           /*#__PURE__*/
           (0, _jsxRuntime.jsxs)("select", {
+            className: "search-control",
             value: theme,
             onChange: e => setTheme(e.target.value),
             onBlur: e => setTheme(e.target.value),
@@ -35542,6 +35550,7 @@ const SearchParams = () => {
         }),
         /*#__PURE__*/
         (0, _jsxRuntime.jsx)("button", {
+          className: "rounded px-6 py-2 text-white hover:opacity-50 border-none",
           style: {
             backgroundColor: theme
           },
@@ -35586,15 +35595,21 @@ const App = () => {
       children:
       /*#__PURE__*/
       (0, _jsxRuntime.jsx)("div", {
+        className: "p-0 m-0",
+        style: {
+          background: "url(http://pets-images.dev-apis.com/pets/wallpaperA.jpg)"
+        },
         children:
         /*#__PURE__*/
         (0, _jsxRuntime.jsxs)(_reactRouterDom.BrowserRouter, {
           children: [
           /*#__PURE__*/
           (0, _jsxRuntime.jsx)("header", {
+            className: "w-full mb-10 text-center p-7 bg-gradient-to-b from-purple-400 via-peru-500 to-red-500",
             children:
             /*#__PURE__*/
             (0, _jsxRuntime.jsx)(_reactRouterDom.Link, {
+              className: "text-6xl text-white hover:text-gray-200",
               to: "/",
               children:
               /*#__PURE__*/
@@ -35662,7 +35677,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54159" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52718" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
